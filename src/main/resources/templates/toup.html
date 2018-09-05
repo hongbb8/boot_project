@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
+<title>Insert title here</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+	<form th:object="${shop}" action="up" method="post">
+	<input type="hidden" name="sid"th:value="*{sid}">
+			<table class="table table-hover">
+		        <tr  class="active">
+		            <td>商家</td>
+		            <td>
+		            <input type="text" name="sname"th:value="*{sname}">
+		         
+		            </td>
+		        </tr>
+		        <tr  class="active">
+		            <td>等级</td>
+		            <td><input type="text" name="leve" th:value="*{leve}"></td>
+		        </tr>
+		        <tr  class="active">
+		            <td>创建时间</td>
+		            <td><input type="text" name="datea" th:value="*{datea}"></td>
+		        </tr>
+		        <tr  class="active">
+		            <td><input type="submit" value="提交"></td>
+		        </tr>
+		    </table>
+   	</form>
+</body>
+</html>
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>user</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body class="container">
+<br/>
+<h1>修改用户</h1>
+<br/><br/>
+<div class="with:80%">
+    <form class="form-horizontal"   th:action="@{/up}" th:object="${shop}"  method="post">
+        <input type="hidden" name="sid" th:value="*{sid}" />
+        <div class="form-group">
+            <label for="sname" class="col-sm-2 control-label">sname</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="sname"  id="sname" th:value="*{sname}" placeholder="sname"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="leve" class="col-sm-2 control-label" >leve</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="leve" id="leve"  th:value="*{leve}" placeholder="leve"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="datea" class="col-sm-2 control-label">datea</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="datea"  id="datea" th:value="*{datea}" placeholder="datea"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" value="Submit" class="btn btn-info" />
+                &nbsp; &nbsp; &nbsp;
+                <a href="/toAdd" th:href="@{list}" class="btn btn-info">Back</a>
+            </div>
+ 
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+ -->

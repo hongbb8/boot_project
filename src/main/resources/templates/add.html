@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
+<title>Insert title here</title>
+<!--确保它能正确呈现在不同设备上:响应式布局-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<form th:action="@{add}" method="post">
+			<table class="table table-hover">
+		        <tr  class="active">
+		            <td>商家</td>
+		            <td><input type="text" name="sname"></td>
+		        </tr>
+		        <tr  class="active">
+		            <td>等级</td>
+		            <td><input type="text" name="leve"></td>
+		        </tr>
+		        <tr  class="active">
+		            <td>创建时间</td>
+		            <td><input type="text" name="datea"></td>
+		        </tr>
+		        <tr  class="active">
+		            <td><input type="submit" value="提交"></td>
+		        </tr>
+		    </table>
+   	</form>
+</body>
+</html>
